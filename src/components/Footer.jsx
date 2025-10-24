@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -6,16 +7,18 @@ const Footer = () => {
       <footer>
         <div class="container">
           <div class="footer__wrapper">
-            <a href="/">
+            <Link to="/reelz-app/">
               <figure class="footer__logo">
                 <img src="./assets/logo.png" class="footer__logo--img" alt="" />
               </figure>
-            </a>
+            </Link>
             <div class="footer__list">
-              <a href="/" class="footer__link">
+              <Link to="/reelz-app/" class="footer__link">
                 Home
-              </a>
-              <a class="footer__link no-cursor">Find Your Movie</a>
+              </Link>
+              <Link to="/reelz-app/" class="footer__link">
+                Find Your Movie
+              </Link>
               <a class="footer__link no-cursor">Contact</a>
             </div>
             <div class="footer__copyright">Copyright &copy; 2025 Reelz</div>

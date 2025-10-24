@@ -14,9 +14,9 @@ function App() {
       <div className="App">
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies/" element={<Movies />} />
-          <Route path="/movie/:id" element={<Movie />} /> {/* new route */}
+          <Route path="/reelz-app/" element={<Home />} />
+          <Route path="/reelz-app/movies/" element={<Movies />} />
+          <Route path="/reelz-app/movie/:id" element={<Movie />} /> {/* new route */}
         </Routes>
         <Footer />
       </div>

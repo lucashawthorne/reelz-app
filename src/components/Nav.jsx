@@ -6,22 +6,22 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav__container">
-        <Link to="/">
+        <Link to="/reelz-app/">
           <img src={Logo} alt="" className="logo" />
         </Link>
         <ul className="nav__links">
           <li>
-            <Link to="/" className="nav__link">
+            <Link to="/reelz-app/" className="nav__link">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/movies/" className="nav__link">
+            <Link to="/reelz-app/movies/" className="nav__link">
               Find Your Movie
             </Link>
           </li>
           <li>
-            <Link to="/" className="nav__link nav__link--primary no-cursor">
+            <Link to="/reelz-app/" className="nav__link nav__link--primary no-cursor">
               Contact
             </Link>
           </li>

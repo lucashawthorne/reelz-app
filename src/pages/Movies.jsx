@@ -14,7 +14,7 @@ const Movies = () => {
   const [sortOption, setSortOption] = useState("");
 
   const handlePreview = (imdbID) => {
-    navigate(`/movie/${imdbID}`); // ✅ navigate to details page
+    navigate(`/reelz-app/movie/${imdbID}`); // ✅ navigate to details page
   };
 
   // Fetch movies when query changes
