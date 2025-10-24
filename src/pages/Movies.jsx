@@ -45,15 +45,15 @@ const Movies = () => {
     if (!query.trim()) return;
 
     setLoading(true);
-    setSearchParams({ search: query });
     setSubmittedQuery(query);
+    setSearchParams({ search: query });
 
     try {
       const response = await fetch(
         `https://www.omdbapi.com/?apikey=96378173&s=${query}`
       );
       const data = await response.json();
-      setMovies(data.Search || []);
+      setMovies(data.Search ? data.Search.slice(0, 6) : []);
     } catch (error) {
       console.error("Error fetching movies:", error);
       setMovies([]);
@@ -109,7 +109,7 @@ const Movies = () => {
 
         <div className="movies">
           {loading ? (
-            <p>Loading search results for “{query}”...</p>
+            <h2>Loading search results for “{submittedQuery}”...</h2>
           ) : movies.length > 0 ? (
             movies.map((movie) => (
               <div key={movie.imdbID} className="movie__wrapper">
@@ -128,8 +128,8 @@ const Movies = () => {
                 </button>
               </div>
             ))
-          ) : query ? (
-            <p>No results for “{query}”.</p>
+          ) : submittedQuery ? (
+            <p>No results for “{submittedQuery}”.</p>
           ) : (
             <p>Start typing to search for a movie!</p>
           )}
