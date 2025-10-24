@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/reelz-app/static/css/main.b704c004.css",
-    "main.js": "/reelz-app/static/js/main.a27f5258.js",
+    "main.css": "/reelz-app/static/css/main.d9caff53.css",
+    "main.js": "/reelz-app/static/js/main.51fc6f18.js",
     "static/js/453.f702aa92.chunk.js": "/reelz-app/static/js/453.f702aa92.chunk.js",
     "static/media/logo.svg": "/reelz-app/static/media/logo.ae7739e8e926ef6520f9ca09eac7910d.svg",
     "static/media/undraw_movies.svg": "/reelz-app/static/media/undraw_movies.9361952570a675cc6660a204cbf97c73.svg",
     "index.html": "/reelz-app/index.html",
-    "main.b704c004.css.map": "/reelz-app/static/css/main.b704c004.css.map",
-    "main.a27f5258.js.map": "/reelz-app/static/js/main.a27f5258.js.map",
+    "main.d9caff53.css.map": "/reelz-app/static/css/main.d9caff53.css.map",
+    "main.51fc6f18.js.map": "/reelz-app/static/js/main.51fc6f18.js.map",
     "453.f702aa92.chunk.js.map": "/reelz-app/static/js/453.f702aa92.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b704c004.css",
-    "static/js/main.a27f5258.js"
+    "static/css/main.d9caff53.css",
+    "static/js/main.51fc6f18.js"
   ]
 }
