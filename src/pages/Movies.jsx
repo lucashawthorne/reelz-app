@@ -10,19 +10,14 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState(searchParams.get("search") || "");
   const [loading, setLoading] = useState(false);
+  const [submittedQuery, setSubmittedQuery] = useState(searchParams.get("search") || "");
+
 
   const [sortOption, setSortOption] = useState("");
 
   const handlePreview = (imdbID) => {
     navigate(`/reelz-app/movie/${imdbID}`); // ✅ navigate to details page
   };
-
-  // Fetch movies when query changes
-  useEffect(() => {
-    if (query.trim()) {
-      fetchMovies(query);
-    }
-  }, [query]);
 
   const fetchMovies = async (searchTerm) => {
     if (!searchTerm.trim()) return; // ignore empty searches
@@ -51,6 +46,7 @@ const Movies = () => {
 
     setLoading(true);
     setSearchParams({ search: query });
+    setSubmittedQuery(query);
 
     try {
       const response = await fetch(
@@ -98,7 +94,7 @@ const Movies = () => {
         <div className="results__wrapper">
           <div className="results">
             <h2 className="results__title">Search results</h2>
-            <h2 className="search__name">{query}</h2>
+            <h2 className="search__name">{submittedQuery}</h2>
           </div>
           <div>
             <select id="sortMovies" value={sortOption} onChange={handleSort}>
