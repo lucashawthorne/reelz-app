@@ -33,6 +33,7 @@ ul {
 
 li {
   list-style-type: none;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -425,20 +426,20 @@ MOVIE DETAILS
   cursor: pointer;
 }
 
-.movie-detail {
+.movie__details {
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.movie-detail__title {
+.movie__details--title {
   font-size: 2.5rem;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.movie-detail__content {
+.movie__details--content {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -447,26 +448,19 @@ MOVIE DETAILS
   justify-content: center;
 }
 
-.movie-detail__poster {
+.movie__details--poster {
   width: 300px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.movie-detail__info {
+.movie__details--info {
   max-width: 500px;
 }
 
-.movie-detail__info p {
-  margin: 8px 0;
-  line-height: 1.5;
+.movie__details--list {
+  display: flex;
+  flex-direction: column;
 }
-
-.movie-detail__info ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
 
 /* 
 

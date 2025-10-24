@@ -29,45 +29,47 @@ const Movie = () => {
   if (!movie) return <h2>Movie not found.</h2>;
 
   return (
-    <div className="movie-detail">
+    <div className="movie__details">
       <button onClick={() => navigate(-1)} className="back__button">
         ← Back to Search
       </button>
-      <h1 className="movie-detail__title">{movie.Title}</h1>
-      <div className="movie-detail__content">
+      <h1 className="movie__details--title">{movie.Title}</h1>
+      <div className="movie__details--content">
         <img
           src={movie.Poster}
           alt={movie.Title}
-          className="movie-detail__poster"
+          className="movie__details--poster"
         />
-        <div className="movie-detail__info">
-          <p>
-            <strong>Year:</strong> {movie.Year}
-          </p>
-          <p>
-            <strong>Rated:</strong> {movie.Rated}
-          </p>
-          <p>
-            <strong>Released:</strong> {movie.Released}
-          </p>
-          <p>
-            <strong>Runtime:</strong> {movie.Runtime}
-          </p>
-          <p>
-            <strong>Genre:</strong> {movie.Genre}
-          </p>
-          <p>
-            <strong>Actors:</strong> {movie.Actors}
-          </p>
-          <p>
-            <strong>Plot:</strong> {movie.Plot}
-          </p>
-          <p>
-            <strong>Language:</strong> {movie.Language}
-          </p>
-          <p>
-            <strong>Ratings:</strong>
-          </p>
+        <div className="movie__details--info">
+          <ul className="movie__details--list">
+            <li>
+              <strong>Year:</strong> {movie.Year}
+            </li>
+            <li>
+              <strong>Rated:</strong> {movie.Rated}
+            </li>
+            <li>
+              <strong>Released:</strong> {movie.Released}
+            </li>
+            <li>
+              <strong>Runtime:</strong> {movie.Runtime}
+            </li>
+            <li>
+              <strong>Genre:</strong> {movie.Genre}
+            </li>
+            <li>
+              <strong>Actors:</strong> {movie.Actors}
+            </li>
+            <li>
+              <strong>Plot:</strong> {movie.Plot}
+            </li>
+            <li>
+              <strong>Language:</strong> {movie.Language}
+            </li>
+            <li>
+              <strong>Ratings:</strong>
+            </li>
+          </ul>
           <ul>
             {movie.Ratings && movie.Ratings.length > 0 ? (
               movie.Ratings.map((rating, index) => (
