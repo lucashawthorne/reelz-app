@@ -9,14 +9,14 @@ const SearchBar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  const handleSearch = (event) => {
+    event.preventDefault();
     if (!query.trim()) return;
     navigate(`/reelz-app/movies?search=${encodeURIComponent(query)}`);
   };
 
-  const handleInputChange = (e) => {
-    const newQuery = e.target.value;
+  const handleInputChange = (event) => {
+    const newQuery = event.target.value;
     setQuery(newQuery); // update local state
     setSearchParams({ search: newQuery }); // update URL for back button navigation
   };

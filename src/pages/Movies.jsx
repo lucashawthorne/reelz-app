@@ -45,8 +45,8 @@ const Movies = () => {
     }
   };
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
+  const handleSearch = async (event) => {
+    event.preventDefault();
     if (!query.trim()) return;
 
     setLoading(true);
@@ -66,8 +66,8 @@ const Movies = () => {
     }
   };
 
-  const handleSort = (e) => {
-    const value = e.target.value;
+  const handleSort = (event) => {
+    const value = event.target.value;
     setSortOption(value);
     let sorted = [...movies];
     if (value === "newest") {
@@ -88,7 +88,7 @@ const Movies = () => {
             className="search__box"
             placeholder="Search for Movies"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(event) => setQuery(event.target.value)}
           />
           <button type="submit" className="search__icon--results">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
