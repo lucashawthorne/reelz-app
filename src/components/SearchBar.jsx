@@ -13,6 +13,12 @@ const SearchBar = () => {
     navigate(`/reelz-app/movies?search=${encodeURIComponent(query)}`);
   };
 
+  const handleInputChange = (e) => {
+    const newQuery = e.target.value;
+    setQuery(newQuery); // update local state
+    setSearchParams({ search: newQuery }); // update URL for back button navigation
+  };
+
   return (
     <form onSubmit={handleSearch} className="search__container">
       <input
@@ -20,7 +26,7 @@ const SearchBar = () => {
         className="search__box"
         placeholder="Search for Movies"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleInputChange}
       />
       <button type="submit" className="search__icon">
         <FontAwesomeIcon icon={faMagnifyingGlass} />

@@ -54,7 +54,7 @@ const Movies = () => {
 
     try {
       const response = await fetch(
-        `https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=${query}`
+        `https://www.omdbapi.com/?apikey=96378173&s=${query}`
       );
       const data = await response.json();
       setMovies(data.Search || []);
