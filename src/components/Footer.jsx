@@ -16,7 +16,7 @@ const Footer = () => {
               <Link to="/reelz-app/" class="footer__link">
                 Home
               </Link>
-              <Link to="/reelz-app/" class="footer__link">
+              <Link to="/reelz-app/movies/" class="footer__link">
                 Find Your Movie
               </Link>
               <a class="footer__link no-cursor">Contact</a>

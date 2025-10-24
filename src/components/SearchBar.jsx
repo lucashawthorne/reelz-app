@@ -10,7 +10,7 @@ const SearchBar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (!query.trim()) return;
-    navigate(`/movies?search=${encodeURIComponent(query)}`);
+    navigate(`/reelz-app/movies?search=${encodeURIComponent(query)}`);
   };
 
   return (
