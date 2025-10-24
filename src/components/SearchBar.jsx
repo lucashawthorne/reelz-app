@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
 
   const handleSearch = (e) => {
     e.preventDefault();
