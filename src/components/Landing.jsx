@@ -1,8 +1,5 @@
 import React from "react";
 import UndrawMovies from "../assets/undraw_movies.svg";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from './SearchBar'
 
 
