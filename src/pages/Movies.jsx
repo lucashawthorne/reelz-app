@@ -102,7 +102,7 @@ const Movies = () => {
 
         <div className="results__wrapper">
           <div className="results">
-            <h2 className="results__title">Search results</h2>
+            <h2 className="results__title">Search results for</h2>
             <h2 className="search__name">{submittedQuery}</h2>
           </div>
           <div>
@@ -126,6 +126,7 @@ const Movies = () => {
                   src={movie.Poster}
                   className="movie__img"
                   alt={movie.Title}
+                  onClick={() => handlePreview(movie.imdbID)}
                 />
                 <h2 className="movie__title">{movie.Title}</h2>
                 <h4 className="movie__year">{movie.Year}</h4>

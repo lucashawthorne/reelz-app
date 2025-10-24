@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,7 +19,12 @@ const Footer = () => {
               <Link to="/reelz-app/movies/" class="footer__link">
                 Find Your Movie
               </Link>
-              <a class="footer__link no-cursor">Contact</a>
+              <a
+                class="footer__link no-cursor"
+                onClick={() => alert("Feature not yet implemented 🙂‍↔️")}
+              >
+                Contact
+              </a>
             </div>
             <div class="footer__copyright">Copyright &copy; 2025 Reelz</div>
           </div>

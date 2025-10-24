@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 
 const Nav = () => {
@@ -21,7 +21,11 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link to="/reelz-app/" className="nav__link nav__link--primary no-cursor">
+            <Link
+              to="/reelz-app/"
+              className="nav__link nav__link--primary no-cursor"
+              onClick={() => alert("Feature not yet implemented 🙂‍↔️")}
+            >
               Contact
             </Link>
           </li>

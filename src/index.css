@@ -157,7 +157,7 @@ h2 {
 }
 
 .light__gold {
-  color: #e0bc60
+  color: #e0bc60;
 }
 
 /* 
@@ -215,7 +215,7 @@ LANDING
   font-size: 20px;
   border-radius: 50px;
   border: none;
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 .search__container {
@@ -323,7 +323,6 @@ MOVIES PAGE
   color: #666;
 }
 
-
 /* 
 
 RESULTS
@@ -348,7 +347,7 @@ RESULTS
 
 .search__name {
   max-width: 500px;
-  color:rgb(255, 77, 0);
+  color: #daa520;
   font-size: 20px;
   margin-left: 20px;
 }
@@ -386,6 +385,14 @@ RESULTS
 .movie__img {
   height: 400px;
   width: 250px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movie__img:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .movie__title {
@@ -400,10 +407,17 @@ RESULTS
 .movie__button {
   font-size: 16px;
   font-weight: bold;
-  background-color: rgb(255, 77, 0);
+  background-color: rgb(0, 0, 0);
+  color: #daa520;
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movie__button:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /*
@@ -420,10 +434,17 @@ MOVIE DETAILS
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: bold;
-  background-color: rgb(255, 77, 0);
+  background-color: black;
+  color: #daa520;
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.back__button:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .movie__details {
@@ -494,7 +515,7 @@ footer {
   filter: grayscale(1) invert(1);
 }
 
- /*SMALL PHONES*/
+/*SMALL PHONES*/
 @media (max-width: 480px) {
   .btn__menu {
     display: block;
@@ -508,7 +529,6 @@ footer {
     max-height: 120px;
   }
 }
-
 
 /*LARGE SMARTPHONES */
 @media (max-width: 640px) {
@@ -545,7 +565,7 @@ footer {
 }
 
 /* LARGE PHONES, TABLETS */
-@media (max-width: 1024px) { 
+@media (max-width: 1024px) {
   .btn__menu {
     display: block;
   }
