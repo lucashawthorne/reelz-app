@@ -10,8 +10,9 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState(searchParams.get("search") || "");
   const [loading, setLoading] = useState(false);
-  const [submittedQuery, setSubmittedQuery] = useState(searchParams.get("search") || "");
-
+  const [submittedQuery, setSubmittedQuery] = useState(
+    searchParams.get("search") || ""
+  );
 
   const [sortOption, setSortOption] = useState("");
 
@@ -73,6 +74,14 @@ const Movies = () => {
     }
     setMovies(sorted);
   };
+
+  useEffect(() => {
+    const searchTerm = searchParams.get("search");
+    if (searchTerm) {
+      setSubmittedQuery(searchTerm); // display query
+      fetchMovies(searchTerm); // fetch movies for existing query
+    }
+  }, [searchParams]);
 
   return (
     <div>
